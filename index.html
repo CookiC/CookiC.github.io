@@ -2,41 +2,148 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+		<script type="text/javascript">
+			
+			var fullHeight = function(){
+				$('.full_height').css('min-height', $(window).height());
+			}
+			
+			var sliderMain = function() {
+				$('.flexslider').flexslider({
+					animation: "fade",
+					slideshowSpeed: 5000,
+					directionNav: false/*
+					start: function(){
+						setTimeout(function(){
+							$('.slider-text').removeClass('animated fadeInUp');
+							$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+						}, 500);
+					},
+					before: function(){
+						setTimeout(function(){
+							$('.slider-text').removeClass('animated fadeInUp');
+							$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+						}, 500);
+					}*/
+	  			});
+			};
+			
+			var masonryMain=function(){
+				var $container = $('#masonry');
+        		$container.masonry({
+                	itemSelector: '.brick',
+	  				gutter:0,
+                	isAnimated: true,
+            	});
+			}
+			
+			var iframeWidth=function(){
+				$('.brick div iframe').css('width', $('.brick>div').width()+20);
+			}
+			
+			$(function(){
+				$(window).resize(fullHeight);
+				$(window).resize(iframeWidth);
+				fullHeight();
+				//iframeWidth();
+				sliderMain();
+				masonryMain();
+			});
+		
+		</script>
         <title>CookiC's Blog 1.0</title>
     </head>
-    
+	
     <body>
-        <div id="body_wrap">
-            <div id="header_wrap">
-                <header class="inner">
-                    <a id="forkme_banner" href="https://github.com/CookiC">View on GitHub</a>
-                    <h1 id="project_title">Cookic.GitHub.io</h1>
-                    <h2 id="project_tagline">Cookic's blog</h2>
-                </header>
-            </div>
-            <div id="content_wrap">
-                <div class="inner">
-                    Blog艰难建设中……
-                </div>
-            </div>
-            <div id="footer_wrap" class="outer">
-                <footer class="inner">
-                    <p>Published with GitHub Pages</p>
-                </footer>
-            </div>
-        </div>
-        <script src="javascript/jquery-3.1.1.min.js"></script>
-        <script>
-            $(function(){
-                var contentHeight=$("#body_wrap").height()-270-40;
-                $("#content_wrap").css("height",contentHeight+"px");
-            })
-            
-            $(window).resize(function(){
-                var contentHeight=$("#body_wrap").height()-270-40;
-                $("#content_wrap").css("height",contentHeight+"px");
-            })
-        </script>
+		<div class="full_height" id="aside">
+			<h1 id="logo">CookiC</h1>
+			<nav class="nav1">
+				<ul  class="text">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="#">Introduction</a></li>
+					<li><a href="#">Article</a></li>
+					<li><a href="#">Album</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="display">
+			<div class="full_height flexslider">
+				<ul class="slides">
+					<li class="full_height" style="background-image:url(images/1.jpg)">
+			   		</li>
+					<li class="full_height" style="background-image:url(images/2.jpg)">
+			   		</li>
+					<li class="full_height" style="background-image:url(images/3.jpg)">
+			   		</li>
+		  		</ul>
+			</div>
+			
+			<div id="masonry">
+				<div class="brick">
+					<div>
+						<img src="images/1.png">
+						<div class="music1">
+							<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="//music.163.com/outchain/player?type=2&id=643164&auto=0&height=66"></iframe>
+						</div>
+					</div>
+				</div>
+  				
+				<div class="brick">
+					<div>
+						<img src="images/1.jpg">
+						<div class="music2">
+							<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height=52 src="//music.163.com/outchain/player?type=2&id=643164&auto=0&height=32"></iframe>
+						</div>
+						<div class="text">
+							<h2>箱子岩</h2>
+							<p>十五年前，我有機會獨坐一只小篷船，沿辰河上行，停船在箱子岩腳下。一列青黛斬削的石壁，夾江高矗，被夕陽烘焙稱為一個五彩屏障。</p>
+						</div>
+					</div>
+				</div>
+  				
+				<div class="brick">
+					<div>
+						<img src="images/2.jpg">
+					</div>
+				</div>
+				
+				<div class="brick">
+					<div>
+						<img src="images/3.jpg">
+					</div>
+				</div>
+				
+				<div class="brick">
+					<div>
+					<img src="images/1.png">
+					</div>
+				</div>
+  				
+				<div class="brick">
+					<div>
+					<img src="images/1.jpg">
+					</div>
+				</div>
+  				<div class="brick">
+					<div>
+					<img src="images/2.jpg">
+					</div>
+				</div>
+  				<div class="brick">
+					<div>
+					<img src="images/3.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
     </body>
 </html>

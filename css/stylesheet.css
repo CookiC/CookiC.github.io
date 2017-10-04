@@ -1,94 +1,223 @@
-html{
-    height:100%;
-    font-family:Microsoft YaHei;
+body {
+    overflow:auto;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #303030;
+	overflow:auto;
 }
 
 body,div{
     margin: 0;
     padding: 0;
+	position: relative;
 }
 
-body {
-    position: relative;
-    height: 100%;
-    background-color: #282828;
-    overflow: hidden;
+p,div{
+	display: block;
+	word-wrap:break-word;
+	color: beige;
 }
 
-div{
-    color: beige;
+a:hover{
+	text-decoration: none;
 }
 
-#body_wrap{
-    height: 100%;
-    width:800px;
-    min-width: 60%;
-    margin: 0 auto;
-    background-color:#373737;
-    -webkit-box-shadow: 0 0 6px #0A0A0A;
-    -moz-box-shadow: 0 0 6px #0A0A0A;
-    box-shadow: 0 0 6px #0A0A0A;
+img{
+	width: 100%;
+}
+/***************************************/
+
+.row{
+	margin: 0;
 }
 
-#header_wrap {
-    height: 180px;
-    background: #212121;
-    background: -moz-linear-gradient(top, #373737, #212121);
-    background: -webkit-linear-gradient(top, #373737, #212121);
-    background: -ms-linear-gradient(top, #373737, #212121);
-    background: -o-linear-gradient(top, #373737, #212121);
-    background: linear-gradient(top, #373737, #212121);
+/************************************/
+.full_height{
 }
 
-#header_wrap .inner {
-    font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-    padding: 50px 10px 30px 10px;
+#logo,.nav1 a,.nav1 a:hover{
+	text-align: center;
+ 	font-family: "Roboto", Arial, sans-serif;
+	color:beige;
+	text-transform: uppercase;
+	letter-spacing: .2em;
 }
 
-#content_wrap{
-  padding-top: 40px;
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/***************右侧展示***********************/
+.display{
+	width:80%;
+	float: right;
+}
+/************flexslider***********************/
+div.flexslider{
+	margin:0px;
+	border:0px;
 }
 
-#footer_wrap {
-    background: #212121;
-    height: 90px;
+.flexslider li{
+	background-repeat: no-repeat;
+	background-position:bottom center;
+	background-size: cover;
 }
 
-#forkme_banner {
-  display: block;
-  position: absolute;
-  top:0;
-  right: 10px;
-  z-index: 10;
-  padding: 10px 50px 10px 10px;
-  color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
-  font-weight: 700;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+.flexslider .flex-control-nav {
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	margin-left:-24px;
+	z-index: 1000;
+    width: auto;
 }
 
-.inner {
-  position: relative;
-  max-width: 640px;
-  padding: 20px 10px;
-  margin: 0 auto;
+.flexslider .flex-control-nav li a {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+	border: 2px solid #000000;
 }
 
-#project_title{
-  margin: 0;
-  color: #fff;
-  font-size: 42px;
-  font-weight: 700;
-    font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  text-shadow: #111 0px 0px 10px;
+.flexslider .flex-control-nav li a.flex-active {
+    cursor: pointer;
+    background: transparent;
+	background-color:black;
+}
+/******************************左侧栏*********************************/
+#aside{
+	background-color: #151515;
+	padding: 80px 0px 80px 0px;
+	width: 20%;
+	position: fixed;
+    top: 0;
+    left: 0;
+	z-index:1001;
+	box-shadow: 5px 0 10px #000000;
 }
 
-#project_tagline {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 300;
-  background: none;
-    text-shadow: #111 0px 0px 10px;
+#logo{
+	font-weight: 700;
+	margin: 70px 0px 100px 0px;
+}
+/******************************导航栏********************************/
+.nav1{
+}
+
+.nav1 ul{
+	padding: 0px;
+}
+
+.nav1 li{
+	text-align: center;
+	font-size:18px;
+	font-weight: 600;
+	line-height: 1.6;
+	box-sizing: border-box;
+	color: white;
+	margin: 0px 0px 40px 0px;
+}
+
+.nav1 a{
+	padding: 10px 10px;
+	position: relative;
+	letter-spacing: .2em;
+	box-sizing: border-box;
+	cursor: auto;
+}
+
+.nav1 a:hover{
+	text-decoration: none;
+}
+
+.nav1 li a:after {
+	content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 7px;
+    left: 10px;
+    right: 10px;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav1 .active a:after{
+	visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav1 a:hover:after{
+	visibility: visible;
+  	-webkit-transform: scaleX(1);
+  	-moz-transform: scaleX(1);
+  	-ms-transform: scaleX(1);
+	-o-transform: scaleX(1);
+  	transform: scaleX(1);
+}
+
+/**********瀑布流**********/
+#masonry {
+	padding:0;
+	width: 94%;
+	margin: 50px auto;
+ }			
+
+.brick{
+	padding: 20px;
+	width: 33.33332%;
+	float:left;
+}
+
+.brick > div{
+	background-color: #252525;
+	box-shadow: 0px 0 5px #101010;
+}
+
+@font-face{
+	font-family:'kangxi';
+	src:url('Demo.ttf') format('truetype');
+}
+
+.text{
+	font-family:TypeLand 康熙字典體,LiSu;
+	padding:1.8rem 2.8rem 3.6rem;
+}
+
+.music1{
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	height:66px;
+}
+
+.music2{
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	height:32px;
+}
+
+iframe{
+	margin: -10px;
 }
