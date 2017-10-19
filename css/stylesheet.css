@@ -204,6 +204,25 @@ div.flexslider{
 	padding:1.8rem 2.8rem 3.6rem;
 }
 
+.text > h2{
+	font-weight:700;
+	font-family:sans-serif;
+}
+
+.text > h2>a{
+	color: inherit;
+}
+
+.text > h4{
+	font-size:100;
+	font-style:italic;
+	margin-bottom: 30px;
+}
+
+.text > p{
+	color:#B0B0A0;
+}
+
 .music1{
 	padding: 0;
 	width: 100%;
