@@ -194,13 +194,24 @@ div.flexslider{
 	box-shadow: 0px 0 5px #101010;
 }
 
-@font-face{
-	font-family:'kangxi';
-	src:url('Demo.ttf') format('truetype');
+@font-face {  
+    font-family:kxzd;  
+    src:url('fonts/kxzd.ttf');
+}  
+
+@font-face {
+    font-family: hoverTreeFont;
+	src: url('http://hovertree.com/themes/fonts/Sansation_Light.ttf'),url('http://hovertree.com/themes/fonts/Sansation_Light.eot'); /* IE9+ */
+}
+
+@font-face {
+	font-family: hoverTreeFont;
+	src: url('http://hovertree.com/themes/fonts/Sansation_Bold.ttf'),url('http://hovertree.com/themes/fonts/Sansation_Bold.eot'); /* IE9+ */
+	font-weight: bold;
 }
 
 .text{
-	font-family:TypeLand 康熙字典體,LiSu;
+	font-family:hoverTreeFont;
 	padding:1.8rem 2.8rem 3.6rem;
 }
 
@@ -220,6 +231,7 @@ div.flexslider{
 }
 
 .text > p{
+	font-family:hoverTreeFont;
 	color:#B0B0A0;
 }
 

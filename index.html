@@ -1,238 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/flexslider.css">
-		<link rel="stylesheet" type="text/css" href="css/animate.css">
-		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-		
-		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-		<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-		<script type="text/javascript">
-			
-			var fullHeight = function(){
-				$('.full_height').css('min-height', $(window).height());
-			}
-			
-			var sliderMain = function() {
-				$('.flexslider').flexslider({
-					animation: "fade",
-					slideshowSpeed: 5000,
-					directionNav: false/*
-					start: function(){
-						setTimeout(function(){
-							$('.slider-text').removeClass('animated fadeInUp');
-							$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-						}, 500);
-					},
-					before: function(){
-						setTimeout(function(){
-							$('.slider-text').removeClass('animated fadeInUp');
-							$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-						}, 500);
-					}*/
-	  			});
-			};
-			
-			var masonryMain=function(){
-				var $container = $('#masonry');
-        		$container.masonry({
-                	itemSelector: '.brick',
-	  				gutter:0,
-                	isAnimated: true,
-            	});
-			}
-			
-			var iframeWidth=function(){
-				$('.brick div iframe').css('width', $('.brick>div').width()+20);
-			}
-			
-			$(function(){
-				$(window).resize(fullHeight);
-				$(window).resize(iframeWidth);
-				fullHeight();
-				iframeWidth();
-				sliderMain();
-				masonryMain();
-			});
-		
-		</script>
-        <title>CookiC's Blog 1.0</title>
-    </head>
-	
-    <body>
-		<div class="full_height" id="aside">
-			<h1 id="logo">CookiC</h1>
-			<nav class="nav1">
-				<ul  class="text">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="#">Introduction</a></li>
-					<li><a href="#">Article</a></li>
-					<li><a href="#">Album</a></li>
-				</ul>
-			</nav>
-		</div>
-		
-		<div class="display">
-			<div class="full_height flexslider">
-				<ul class="slides">
-					<li class="full_height" style="background-image:url(images/1.jpg)">
-			   		</li>
-					<li class="full_height" style="background-image:url(images/3.jpg)">
-			   		</li>
-		  		</ul>
-			</div>
-			
-			<div id="masonry">
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/439%20C.%20The%20Intriguing%20Obsession.html"> #439 C. The Intriguing Obsession</a></h2>
-							<p>— This is not playing but duty as allies of justice, Nii-chan!</p>
-							<p>— Not allies but justice itself, Onii-chan!</p>
-							<p>With hands joined, go everywhere at a speed faster than our thoughts! This time, the Fire Sisters — Karen and Tsukihi — is heading for somewhere they've never reached — water-surrounded islands!</p>
-						</div>
-					</div>
-				</div>
-  				
-				<div class="brick">
-					<div>
-						<div>
-							<div class="text">
-								<h2><a href="page/438%20C.%20Qualification%20Rounds.html">#438 C. Qualification Rounds</a></h2>
-								<p>Snark and Philip are preparing the problemset for the upcoming pre-qualification round for semi-quarter-finals. They have a bank of n problems, and they want to select any non-empty subset of it as a problemset.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="music1">
-							<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=410042522&auto=0&height=66"></iframe>
-						</div>
-					</div>
-				</div>
-  				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2>箱子岩</h2>
-							<p>十五年前，我有機會獨坐一只小篷船，沿辰河上行，停船在箱子岩腳下。一列青黛斬削的石壁，夾江高矗，被夕陽烘焙稱為一個五彩屏障。</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/6209%20The%20Intersection.html">6209 The Intersection</a></h2>
-							<p>A given coefficient K leads an intersection of two curves f(x) and g_K(x). In the first quadrant, the curve f is a monotone increasing function that f(x)=\sqrt x. The curve g is decreasing and g_K(x)=K/x.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/MSU%20Round%202%20B.%20Ordering%20Pizza.html">MSU Round 2 B. Ordering Pizza</a></h2>
-							<p>It's another Start[c]up finals, and that means there is pizza to order for the onsite contestants. There are only 2 types of pizza (obviously not, but let's just pretend for the sake of the problem), and all pizzas contain exactly S slices.</p>
-						</div>
-					</div>
-				</div>
-  				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/436%20E.%20Fire.html">#436 E. Fire</a></h2>
-							<p>Polycarp is in really serious trouble — his house is on fire! It's time to save the most valuable items. Polycarp estimated that it would take t_i seconds to save i-th item. In addition, for each item, he estimated the value of d_i — the moment after which the item i will be completely burned and will no longer be valuable for him at all. In particular, if t_i ≥ d_i, then i-th item cannot be saved.</p>
-						</div>
-					</div>
-				</div>
-  				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/435%20C.%20Mahmoud%20and%20Ehab%20and%20the%20xor.html">#435 C. Mahmoud and Ehab and the xor</a></h2>
-							<p>Mahmoud and Ehab are on the third stage of their adventures now. As you know, Dr. Evil likes sets. This time he won't show them any set from his large collection, but will ask them to create a new set to replenish his beautiful collection of sets.</p>
-						</div>
-					</div>
-				</div>
-				
-  				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BA%D1%83%D0%B1%D0%BE%D0%BA%202018%20-%201%20D.%20Polycarp's%20phone%20book.html">Технокубок 2018 - 1 D. Polycarp's phone book</a></h2>
-							<p>There are n phone numbers in Polycarp's contacts on his phone. Each number is a 9-digit integer, starting with a digit different from 0. All the numbers are distinct.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/5534%20Partial%20Tree.html">5534 Partial Tree</a></h2>
-							<p>In mathematics, and more specifically in graph theory, a tree is an undirected graph in which any two nodes are connected by exactly one path. In other words, any connected graph without simple cycles is a tree.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/432%20B.%20Arpa%20and%20a%20list%20of%20numbers.html">#432 B. Arpa and a list of numbers</a></h2>
-							<p>Arpa has found a list containing n numbers. He calls a list bad if and only if it is not empty and gcd (see notes section for more information) of numbers in the list is 1.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/ECR%2030%20B.%20Balanced%20Substring.html">ECR 30 B. Balanced Substring</a></h2>
-							<p>You are given a string s consisting only of characters 0 and 1. A substring [l, r] of s is a string s_ls_{l+ 1}s_{l+2}... s_r, and its length equals to r-l+1. A substring is called balanced if the number of zeroes (0) equals to the number of ones in this substring.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/ECR%2030%20C.%20Strange%20Game%20On%20Matrix.html">ECR 30 C. Strange Game On Matrix</a></h2>
-							<p>Ivan is playing a strange game.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/ECR%2029%20D.%20Yet%20Another%20Array%20Queries%20Problem.html"> ECR 29 D. Yet Another Array Queries Problem</a></h2>
-							<p>You are given an array a of size n, and q queries to it. There are queries of two types:</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/ECR%2029%20C.%201-2-3.html">ECR 29 C. 1-2-3</a></h2>
-							<p>Ilya is working for the company that constructs robots. Ilya writes programs for entertainment robots, and his current project is "Bob", a new-generation game robot. Ilya's boss wants to know his progress so far. Especially he is interested if Bob is better at playing different games than the previous model, "Alice".</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="brick">
-					<div>
-						<div class="text">
-							<h2><a href="page/2017-2018%20ACM-ICPC%20NEERC%20H.%20Load%20Testing.html">2017-2018 ACM-ICPC NEERC H. Load Testing</a></h2>
-							<p>Polycarp plans to conduct a load testing of its new project Fakebook. He already agreed with his friends that at certain points in time they will send requests to Fakebook. The load testing will last n minutes and in the i-th minute friends will send a_i requests.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS3自定义字体 - 何问起</title><base target="_blank"/>
+    <meta charset="utf-8" />
+    <style>
+    @font-face {
+        font-family: hoverTreeFont;
+        src: url('http://hovertree.com/themes/fonts/Sansation_Light.ttf'),url('http://hovertree.com/themes/fonts/Sansation_Light.eot'); /* IE9+ */
+    }
+
+    @font-face {
+        font-family: hoverTreeFont;
+        src: url('http://hovertree.com/themes/fonts/Sansation_Bold.ttf'),url('http://hovertree.com/themes/fonts/Sansation_Bold.eot'); /* IE9+ */
+        font-weight: bold;
+    }
+
+    .hvtbold {
+        font-family: hoverTreeFont;
+    }
+    .hvtbold a{font-family: hoverTreeFont;}a{color:blue}
+    div{font-size:16px;font-family:Arial, Sans-Serif,NSimSun,"\5b8b\4f53";border:1px solid green;margin:5px;}
+</style>
+</head>
+<body>
+    
+    
+    <div class="hvtbold">
+        加了自定义字体的效果：<br /><br />
+
+        With CSS3, websites can <b>finally</b> use fonts other than the pre-selected "web-safe" fonts.
+        <br /><br />何问起 hovertree.com <br /><br /><b>柯乐义http://keleyi.com</b><br /><br /><a href="http://hovertree.com/down/">ASP.NET CMS源代码下载</a><br />
+<br /><a href="http://hovertree.com/hvtart/bjae/is0xr36t.htm">原文</a> <a href="http://hovertree.com/">首页</a> <a href="http://hovertree.com/down/">更多特效</a>
+    </div>
+    
+    <div>没加自定义字体的效果：<br /><br />
+
+        With CSS3, websites can <b>finally</b> use fonts other than the pre-selected "web-safe" fonts.
+        <br /><br />何问起 hovertree.com <br /><br /><b>柯乐义http://keleyi.com</b><br /><br /><a href="http://hovertree.com/down/">ASP.NET CMS源代码下载</a><br />
+<br /><a href="http://hovertree.com/hvtart/bjae/is0xr36t.htm">原文</a> <a href="http://hovertree.com/">首页</a> <a href="http://hovertree.com/down/">更多特效</a>
+    </div>
+
+</body>
 </html>
